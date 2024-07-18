@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Другие тэги -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
+      integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+  </head>
+  <body>
+    <div id="cat-anim-container" style="width: 400px; height: 400px"></div>
+  </body>
+
+  <!-- <script>
+    // Ссылка на json
+    const animationPath = "https://files.tri-nol.com/OVER/1200.json";
+
+    const animationContainer = document.getElementById("cat-anim-container");
+    const animData = {
+      container: animationContainer,
+      renderer: "canvas",
+      loop: true,
+      autoplay: true,
+      path: animationPath,
+    };
+    const anim = lottie.loadAnimation(animData);
+  </script> -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
+
+  <script>
+    // Автоматическое проигрывание
+    LottieInteractivity.create({
+      player: "#lottie-auto-1", //ID lottie-player в зеро-блоке и тут должны совпадать
+      mode: "chain",
+      actions: [
+        {
+          state: "autoplay",
+          type: "loop",
+          transition: "repeat",
+        },
+      ],
+    });
+  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <lottie-player
+    src="https://drive.google.com/uc?export=download&id=1vAHKXYUXkmwJTzbYMXIyO0EncMDrBaSc"
+    background="##FFFFFF"
+    speed="1"
+    style="width: 300px; height: 300px"
+    loop
+    autoplay
+    direction="1"
+    mode="normal"
+  ></lottie-player>
+</html>
